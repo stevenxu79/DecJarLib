@@ -23,17 +23,18 @@ MyClassFileLoadHook(jvmtiEnv *jvmti_env, JNIEnv* jni_env,
 	const char* projectStr2 = "com/seassoon";
 	const char* springStr = "SimpleMetadataReader";
 	const char* springStr2 = "LocalVariableTableParameterNameDiscoverer";
-	const char* notStr = "$";
+//	const char* notStr = "$";
+	const char* notCheckStr = "$$";
 	const static int deKeyLen = 10;
 	int deKeyInt[deKeyLen] = { 33, -49, -77, 49, 106, -5, -99, 0, -5, -72 };
 	unsigned char deKeyChar[deKeyLen];
 	for (int i = 0; i < deKeyLen; i++) {
 		deKeyChar[i] = deKeyInt[i];
 	}
-	if (name
-			&& (strstr(name, projectStr2) || strstr(name, springStr)
-					|| strstr(name, springStr2)) && !strstr(name, notStr)) {
-//		printf("%s", "EncName22:");
+//	if (name&& (strstr(name, projectStr2) || strstr(name, springStr)|| strstr(name, springStr2)) && !strstr(name, notStr)) {
+//	if (name&& (strstr(name, projectStr2) || strstr(name, springStr)|| strstr(name, springStr2)) ) {
+	if (name&& (strstr(name, projectStr2) || strstr(name, springStr)|| strstr(name, springStr2)) && !strstr(name, notCheckStr)) {
+//		printf("%s", "EncName3:");
 //		printf("%s", name);
 //		printf("\n");
 		for (int i = 0; i < class_data_len; ++i) {
