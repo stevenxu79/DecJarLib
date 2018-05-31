@@ -2,7 +2,7 @@ ifeq ($(shell uname), Linux)
   CC         = g++ -fPIC 
   LIBLINK    = -shared 
   INCLUDEDIR = -I /opt/jdk1.8.0_111/include -I /opt/jdk1.8.0_111/include/linux
-  TARGET     = libdecrypt.so
+  TARGET     = liblibDecJarLib.so
 endif
 
 ifeq ($(shell uname), Darwin)
@@ -12,7 +12,7 @@ ifeq ($(shell uname), Darwin)
   INCLUDEDIR = -I/System/Library/Frameworks/JavaVM.framework/Headers
 endif
 
-OBJS = decrypt.o com_seassoon_encrypt_Decrypt.o com_seassoon_encrypt_Decrypt.o org_springframework_core_LocalVariableTableParameterNameDiscoverer.o org_springframework_core_type_classreading_SimpleMetadataReader.o
+OBJS = decrypt.o com_seassoon_encrypt_Decrypt.o org_springframework_core_LocalVariableTableParameterNameDiscoverer.o org_springframework_core_type_classreading_SimpleMetadataReader.o
 
 $(TARGET):$(OBJS)
 	$(CC) $(LIBLINK) -o $(TARGET) $(OBJS)

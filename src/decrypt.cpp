@@ -24,7 +24,7 @@ MyClassFileLoadHook(jvmtiEnv *jvmti_env, JNIEnv* jni_env,
 	const char* springStr = "SimpleMetadataReader";
 	const char* springStr2 = "LocalVariableTableParameterNameDiscoverer";
 	const char* notStr = "$";
-	int deKeyLen = 10;
+	const static int deKeyLen = 10;
 	int deKeyInt[deKeyLen] = { 33, -49, -77, 49, 106, -5, -99, 0, -5, -72 };
 	unsigned char deKeyChar[deKeyLen];
 	for (int i = 0; i < deKeyLen; i++) {
@@ -33,9 +33,9 @@ MyClassFileLoadHook(jvmtiEnv *jvmti_env, JNIEnv* jni_env,
 	if (name
 			&& (strstr(name, projectStr2) || strstr(name, springStr)
 					|| strstr(name, springStr2)) && !strstr(name, notStr)) {
-		printf("%s", "EncName22:");
-		printf("%s", name);
-		printf("\n");
+//		printf("%s", "EncName22:");
+//		printf("%s", name);
+//		printf("\n");
 		for (int i = 0; i < class_data_len; ++i) {
 //        	 my_data[i] = (class_data[i] ^ 0x0B)- 'K';
 			my_data[i] = class_data[i];
