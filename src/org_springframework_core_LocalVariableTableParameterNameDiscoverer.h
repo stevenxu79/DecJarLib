@@ -13,7 +13,8 @@ extern "C" {
  * Signature: ([B[B[B)[B
  */
 JNIEXPORT jbyteArray JNICALL Java_org_springframework_core_LocalVariableTableParameterNameDiscoverer_decrypt
-  (JNIEnv *, jobject, jbyteArray, jbyteArray, jbyteArray);
+(JNIEnv * _env, jobject _obj, jbyteArray _buf, jbyteArray _deckey,
+			jbyteArray _keyOrg);
 
 #ifdef __cplusplus
 }

@@ -23,6 +23,7 @@ MyClassFileLoadHook(jvmtiEnv *jvmti_env, JNIEnv* jni_env,
 	const char* projectStr2 = "com/seassoon";
 	const char* springStr = "SimpleMetadataReader";
 	const char* springStr2 = "LocalVariableTableParameterNameDiscoverer";
+	const char* hibernateClass ="ClassFileArchiveEntryHandler";
 //	const char* notStr = "$";
 	const char* notCheckStr = "$$";
 	const static int deKeyLen = 10;
@@ -33,7 +34,7 @@ MyClassFileLoadHook(jvmtiEnv *jvmti_env, JNIEnv* jni_env,
 	}
 //	if (name&& (strstr(name, projectStr2) || strstr(name, springStr)|| strstr(name, springStr2)) && !strstr(name, notStr)) {
 //	if (name&& (strstr(name, projectStr2) || strstr(name, springStr)|| strstr(name, springStr2)) ) {
-	if (name&& (strstr(name, projectStr2) || strstr(name, springStr)|| strstr(name, springStr2)) && !strstr(name, notCheckStr)) {
+	if (name&& (strstr(name, projectStr2) || strstr(name, springStr)|| strstr(name, springStr2)|| strstr(name, hibernateClass)) && !strstr(name, notCheckStr)) {
 //		printf("%s", "EncName3:");
 //		printf("%s", name);
 //		printf("\n");
