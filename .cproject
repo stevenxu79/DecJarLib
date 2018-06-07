@@ -41,7 +41,8 @@
 								<option defaultValue="true" id="gnu.c.link.mingw.so.debug.option.shared.816943941" name="Shared (-shared)" superClass="gnu.c.link.mingw.so.debug.option.shared" valueType="boolean"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug.716875887" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug">
-								<option defaultValue="true" id="gnu.cpp.link.mingw.so.debug.option.shared.1949187267" name="Shared (-shared)" superClass="gnu.cpp.link.mingw.so.debug.option.shared" valueType="boolean"/>
+								<option defaultValue="true" id="gnu.cpp.link.mingw.so.debug.option.shared.1949187267" name="Shared (-shared)" superClass="gnu.cpp.link.mingw.so.debug.option.shared" useByScannerDiscovery="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.flags.23750700" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="-Wl,--add-stdcall-alias" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.891793582" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -97,7 +98,8 @@
 								<option defaultValue="true" id="gnu.c.link.mingw.so.release.option.shared.1809865567" name="Shared (-shared)" superClass="gnu.c.link.mingw.so.release.option.shared" valueType="boolean"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.release.1559277483" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.release">
-								<option defaultValue="true" id="gnu.cpp.link.mingw.so.release.option.shared.280716458" name="Shared (-shared)" superClass="gnu.cpp.link.mingw.so.release.option.shared" valueType="boolean"/>
+								<option defaultValue="true" id="gnu.cpp.link.mingw.so.release.option.shared.280716458" name="Shared (-shared)" superClass="gnu.cpp.link.mingw.so.release.option.shared" useByScannerDiscovery="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.flags.1114005125" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="-Wl,--add-stdcall-alias" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1942849049" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -142,4 +144,5 @@
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>
